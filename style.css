@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  font-family: 'Prompt', sans-serif;
+  color: #e6eefc;
+  background: linear-gradient(45deg, #6c7ce2, #0e1117, #7cf7e5);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navigation */
+.nav {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: #1e3a8a; 
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 700;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5ab0ff, #7cf7e5);
+}
+.menu {
+  display: flex;
+  gap: 18px;
+  font-weight: 500;
+}
+.menu a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: white; 
+}
+.menu a:hover {
+  background: rgba(255,255,255,.06);
+}
+
+/* Hero */
+.hero {
+  padding: 80px 0 40px;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 30px;
+  align-items: center;
+}
+.badge {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(124,247,229,.12);
+  border: 1px solid rgba(124,247,229,.25);
+  color: #bffaf1;
+}
+.highlight {
+  color: #5ab0ff;
+}
+h1 {
+  font-size: clamp(20px,5.2vw,34px);
+  margin: 12px 0;
+}
+.lead {
+  font-size: 18px;
+  color: #96a3b8;
+}
+.cta {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+}
+.btn {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 14px;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #5ab0ff, #7cf7e5);
+  color: #0b0f15;
+}
+.btn-ghost {
+  background: rgba(255,255,255,.06);
+  color: #e6eefc;
+  border: 1px solid rgba(255,255,255,.12);
+}
+.pfp {
+  width: 260px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+/* Sections */
+.section {
+  padding: 40px 0;
+}
+.section h2 {
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+/* Cards & Grid */
+.card {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  padding: 14px;
+}
+.grid {
+  display: grid;
+  gap: 18px;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  margin: 6px 6px 0 0;
+  font-size: .92rem;
+}
+.project p {
+  color: #96a3b8;
+}
+.project .links {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Footer */
+footer {
+  background: rgba(10,14,20,.8);
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #96a3b8;
+}
+/* Contact Section */
+#contact {
+  padding: 40px 0;  
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;  
+  min-height: 60vh;  
+}
+
+#contact h2 {
+  font-size: 26px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+#contact p {
+  text-align: center;  
+  font-size: 18px;
+  color: #96a3b8;
+}
+/* Profile Picture (Contact Section) */
+.pfp {
+  width: 300px; /* Increased size */
+  height: 300px; /* Same height to keep it a perfect circle */
+  border-radius: 50%; /* Keeps the image in a circle shape */
+  border: 5px solid #ffffff; /* Thicker white border */
+  object-fit: cover; /* Ensures the image fills the circle area without distortion */
+}
